@@ -5,17 +5,19 @@
 
 
 const inputText = document.querySelector('#validation-input');
-const inputLength = inputText.dataset.length;
+const inputData = document.querySelector('input[data-length]');
+
+const inputLength = inputData.dataset.length;
 
 
-inputText.addEventListener('blur', () => {
-    if(inputText.value.length === inputLength){
+inputText.addEventListener('blur', (event) => {
+    if(event.currentTarget.value.length >= inputLength){
+        inputText.classList.remove('invalid');
         inputText.classList.add('valid');
+        
     }else{
         inputText.classList.add('invalid');
+        inputText.classList.remove('valid');
     }
-    
-    console.log(inputText.value.length);
-    console.log(inputText.value);
 })
 
