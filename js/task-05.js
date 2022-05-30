@@ -8,5 +8,10 @@ const inputForm = document.querySelector('#name-input');
 const outputText = document.getElementById('name-output');
 
 inputForm.addEventListener('input', () => {
-   outputText.textContent = inputForm.value;
+   if(inputForm.value === '') {
+      outputText.textContent = "Anonymous";
+   }
+   else(outputText.textContent = inputForm.value)
+   
 });
+

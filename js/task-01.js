@@ -8,8 +8,8 @@ console.log('Number of categories:', quantityLiItems.length);
 
 quantityLiItems.forEach(el => {
     console.log( `Category: ${el.firstElementChild.textContent}`);
-    const countLi = el.querySelectorAll('li');
-    console.log(`Elements: ${countLi.length}`);
+
+    console.log(`Elements: ${el.lastElementChild.children.length}`);
 })
 
 

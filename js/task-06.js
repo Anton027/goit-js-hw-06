@@ -5,19 +5,19 @@
 
 
 const inputText = document.querySelector('#validation-input');
-const inputData = document.querySelector('input[data-length]');
+const inputData = document.querySelector('input[data-length="6"]');
 
 const inputLength = inputData.dataset.length;
 
 
-inputText.addEventListener('blur', (event) => {
-    if(event.currentTarget.value.length >= inputLength){
-        inputText.classList.remove('invalid');
-        inputText.classList.add('valid');
-        
-    }else{
-        inputText.classList.add('invalid');
-        inputText.classList.remove('valid');
-    }
-})
+inputText.addEventListener('blur', (e) => {
+    validationOfCountNumbers(e);
+});
 
+function validationOfCountNumbers(e){
+    if(e.currentTarget.value.length == inputLength){
+        inputText.classList.add('valid');
+    }else
+        (inputText.classList.add('invalid'));
+
+};

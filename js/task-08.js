@@ -24,8 +24,9 @@ function onSubmitForm(event) {
     if(mail === '' || password === '') {
         alert("All fileds must be filled");
     }else {
-        user.mail = mail;
-        user.password = password;
+        user.mail = mail,
+            user.password = password
+        
     }
 
 
@@ -34,6 +35,7 @@ function onSubmitForm(event) {
         console.log('value: ', value);
         console.log('name: ', name);
     }) 
-
+    
     form.reset();
+    return user;
 }
