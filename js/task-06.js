@@ -15,7 +15,7 @@ inputText.addEventListener('blur', (e) => {
 });
 
 function validationOfCountNumbers(e){
-    if(e.currentTarget.value.length == inputLength){
+    if(e.currentTarget.value.length === Number(inputLength)){
         inputText.classList.add('valid');
     }else
         (inputText.classList.add('invalid'));

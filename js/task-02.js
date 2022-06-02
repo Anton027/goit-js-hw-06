@@ -15,15 +15,17 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector('#ingredients');
-function createElementLi(el){
+function createElementLi(...el){
   const li = document.createElement('li');
   li.classList.add('item');
   li.textContent = el;
   listEl.append(li);
 }
 
+
 ingredients.forEach(el => {
+  
   createElementLi(el);
+  
 });
 
-console.log(listEl);
