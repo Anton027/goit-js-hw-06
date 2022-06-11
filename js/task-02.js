@@ -15,10 +15,18 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector('#ingredients');
-for (let ingredient of [...ingredients]) {
+
+const elements = ingredients.map(ingredient => {
   const li = document.createElement('li');
   li.classList.add('item');
   li.textContent = ingredient;
-  listEl.append(li);
-}
+
+  return li;
+})
+// Передивився матеріали з Репетою
+listEl.append(...elements);
+
+
+
+
 console.log(listEl);
